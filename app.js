@@ -1,3 +1,7 @@
+import {useConnex} from "src/context/ConnexContext"
+
+const {thor, vendor} = useConnex()
+
 
 import {
     WalletConnectModalSign,
