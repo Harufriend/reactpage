@@ -34,6 +34,27 @@ import {
   
   const projectId = 'your project id' // Replace 'your project id' with the actual project ID
   
+  const web3Modal = new WalletConnectModal({
+    projectId: DEFAULT_PROJECT_ID,
+    explorerRecommendedWalletIds: "NONE",
+    mobileWallets: [
+      {
+        name: "VeWorld",
+        id: "veworld-mobile",
+        links: {
+          native: "veworld://org.vechain.veworld.app/",
+          universal: "https://veworld.net",
+        },
+      },
+    ],
+    themeVariables: {
+      "--wcm-z-index": "99999999",
+    },
+    walletImages: {
+      "veworld-mobile": process.env.PUBLIC_URL + "/images/logo/veWorld.png",
+    },
+  })
+
   export default function HomePage() {
     const [session, setSession] = useState({})
     const { request, data, error, loading } = useRequest()
