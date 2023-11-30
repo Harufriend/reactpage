@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VeChain App</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>VeChain App</h1>
+    <button id="connect">Connect Wallet</button>
+    <button id="sendTransaction">Send Transaction</button>
+    <script>
+        document.getElementById('connect').addEventListener('click', function() {
+            connectWallet();
+        });
+        document.getElementById('sendTransaction').addEventListener('click', function() {
+            sendTransaction();
+        });
+    </script>
+</body>
+</html>
